@@ -175,6 +175,48 @@
         .progress-bar {
             background: var(--primary-blue);
         }
+
+        <style>
+  .skill-card {
+    position: relative;
+    transition: transform 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .skill-card:hover {
+    transform: scale(1.03);
+  }
+
+  .certificate-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+    padding: 20px;
+  }
+
+  .certificate-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  .skill-card:hover .certificate-preview {
+    opacity: 1;
+    visibility: visible;
+  }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar">
@@ -345,6 +387,22 @@
                             <h6>Tekla</h6>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card skill-card text-center p-4">
+                            <div class="skill-icon">
+                                <img src="./5.png" style="width: 100px; height: 100px;">
+                            </div>
+                            <h6>Blue Beam</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card skill-card text-center p-4">
+                            <div class="skill-icon">
+                                <img src="./6.png" style="width: 100px; height: 100px;">
+                            </div>
+                            <h6>RISA 3D</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -396,7 +454,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="card project-card h-100">
-                        <img src="https://images.pexels.com/photos/257700/pexels-photo-257700.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Transmission Tower" style="height: 250px; object-fit: cover;">
+                        <img src="./Power-transmission-lines-640x365.jpg" class="card-img-top" alt="Transmission Tower" style="height: 250px; object-fit: cover;">
                         <div class="card-body">
                             <span class="badge bg-primary mb-2">Major Project</span>
                             <h5 class="card-title">Analysis, Design and Estimation of Transmission Tower</h5>
@@ -506,7 +564,7 @@
                         <div class="progress mb-2" style="height: 8px;">
                             <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <small class="text-muted">CGPA: 6.5/10</small>
+                        <small class="text-muted">CGPA: 7.2/10</small>
                     </div>
                     
                     <div class="timeline-item mb-4">
@@ -533,38 +591,47 @@
 
     <!-- Certificates Section -->
     <section id="certificates" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center">Certificates & Achievements</h2>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card skill-card text-center p-4">
-                        <div class="skill-icon">
-                            <i class="bi bi-trophy fs-2 text-warning"></i>
-                        </div>
-                        <h5>Parigrah 2k22</h5>
-                        <p class="text-muted">Model Making Competition Winner</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card skill-card text-center p-4">
-                        <div class="skill-icon">
-                            <i class="bi bi-easel fs-2 text-success"></i>
-                        </div>
-                        <h5>SEMCE Conference</h5>
-                        <p class="text-muted">2nd International Conference - Poster Presentation</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card skill-card text-center p-4">
-                        <div class="skill-icon">
-                            <i class="bi bi-award fs-2 text-warning"></i>
-                        </div>
-                        <h5>Mission 2030</h5>
-                        <p class="text-muted">Gold Medal in 5K Run (AIESEC)</p>
-                    </div>
-                </div>
+    <div class="container">
+        <h2 class="section-title text-center">Certificates & Achievements</h2>
+        <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card skill-card text-center p-4">
+            <div class="skill-icon">
+                <i class="bi bi-trophy fs-2 text-warning"></i>
+            </div>
+            <h5>Parigrah 2k22</h5>
+            <p class="text-muted">Model Making Competition Winner</p>
+            <div class="certificate-preview">
+                <img src="./parigrah.png" alt="Parigrah Certificate">
+            </div>
             </div>
         </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card skill-card text-center p-4">
+            <div class="skill-icon">
+                <i class="bi bi-easel fs-2 text-success"></i>
+            </div>
+            <h5>SEMCE Conference</h5>
+            <p class="text-muted">2nd International Conference - Poster Presentation</p>
+            <div class="certificate-preview">
+                <img src="./01 Participation_split_12_page-0001.jpg" alt="SEMCE Conference Certificate">
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card skill-card text-center p-4">
+            <div class="skill-icon">
+                <i class="bi bi-award fs-2 text-warning"></i>
+            </div>
+            <h5>Mission 2030</h5>
+            <p class="text-muted">Gold Medal in 5K Run (AIESEC)</p>
+            <div class="certificate-preview">
+                <img src="./G Munisankar PARTICIPATION CERTIFICATES_page-0001.jpg" alt="Mission 2030 Certificate">
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
     </section>
 
     <!-- Contact Section -->
